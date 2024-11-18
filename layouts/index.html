@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="hero">
+    <div class="hero-logo-container">
+        <img src="/images/logo.svg" alt="Strength Edge Tech Logo" class="hero-logo">
+    </div>
+    <p class="tagline">{{ .Site.Params.description }}</p>
+</div>
+<section class="features">
+    <div class="container">
+        <h2>Our Solutions</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>Innovation</h3>
+                <p>Cutting-edge solutions for modern businesses</p>
+            </div>
+            <div class="feature-item">
+                <h3>Reliability</h3>
+                <p>Robust and scalable technology infrastructure</p>
+            </div>
+            <div class="feature-item">
+                <h3>Support</h3>
+                <p>24/7 dedicated technical assistance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video-section">
+    <div class="container">
+        <h2>See Us in Action</h2>
+        <div class="video-container">
+            <!-- Replace VIDEO_ID with your actual YouTube video ID -->
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/xvFZjo5PgG0?si=kMy1ik8ctPZxsrol" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+{{ end }}
+
