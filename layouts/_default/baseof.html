@@ -6,7 +6,7 @@
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body> 
+<body>
     <button class="mobile-menu-button" aria-label="Menu">☰</button>
     <header>
         <nav>
@@ -15,11 +15,9 @@
             {{ end }}
         </nav>
     </header>
-    
     <main>
         {{ block "main" . }}{{ end }}
     </main>
-
     <footer>
         <div class="footer-content">
             <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
@@ -28,9 +26,8 @@
     <script>
         let menuButton = document.querySelector('.mobile-menu-button');
         let nav = document.querySelector('nav');
-        
         menuButton.addEventListener('click', function() {
-            console.log('Menu clicked');  // For debugging
+            console.log('Menu clicked'); // For debugging
             nav.classList.toggle('active');
         });
     </script>

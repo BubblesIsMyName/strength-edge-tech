@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="container">
+    <section class="about-section">
+        <!-- Mission Statement -->
+        <div class="mission-statement">
+            <h1>{{ .Title }}</h1>
+            <div class="about-hero-image" style="margin: 1rem 0;">
+                <img src="/images/founders_24.jpg" alt="Strength Edge Tech Team" style="width: 100%; height: auto; max-height: 430px; object-fit: cover; border-radius: 4px;">
+            </div>
+            <p><strong>{{ .Params.mission }}</strong></p>
+        </div>
+
+        <!-- Story Section -->
+        <div class="about-grid">
+            <div class="about-item">
+                <h2>Our Journey</h2>
+                <p>{{ .Params.story_part1 }}</p>
+            </div>
+            <div class="about-item">
+                <h2>Our Vision</h2>
+                <p>{{ .Params.story_part2 }}</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <h2 style="text-align: center; margin-top: 4rem;">Our Team</h2>
+        <div class="about-grid">
+            {{ range .Params.team_members }}
+            <div class="about-item" style="text-align: center;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background-color: var(--bg-color); margin: 0 auto 1rem;">
+                    {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .name }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    {{ end }}
+                </div>
+                <h3>{{ .name }}</h3>
+                <p style="color: var(--primary-color);">{{ .position }}</p>
+                <p>{{ .bio }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}
