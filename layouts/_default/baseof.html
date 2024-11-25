@@ -9,11 +9,18 @@
 <body>
     <button class="mobile-menu-button" aria-label="Menu">☰</button>
     <header>
-        <nav>
-            {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}">{{ .Name }}</a>
+        <div class="header-container">
+            <nav>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+            </nav>
+            {{ if ne .RelPermalink "/" }}
+            <div class="header-logo">
+                <img src="/images/logo.svg" alt="{{ .Site.Title }} Logo">
+            </div>
             {{ end }}
-        </nav>
+        </div>
     </header>
     <main>
         {{ block "main" . }}{{ end }}
