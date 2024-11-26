@@ -257,6 +257,15 @@ footer {
     padding: 0;
 }
 
+.header-logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.header-logo a:hover {
+    opacity: 0.9;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {

@@ -17,7 +17,9 @@
             </nav>
             {{ if ne .RelPermalink "/" }}
             <div class="header-logo">
-                <img src="/images/logo.svg" alt="{{ .Site.Title }} Logo">
+                <a href="/" style="display: block;">
+                    <img src="/images/logo.svg" alt="{{ .Site.Title }} Logo">
+                </a>
             </div>
             {{ end }}
         </div>
